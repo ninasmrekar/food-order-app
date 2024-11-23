@@ -6,7 +6,9 @@ function Meals() {
 
   useEffect(() => {
     async function fetchMeals() {
-      const response = await fetch("http://localhost:3000/meals");
+      const response = await fetch(
+        "https://food-order-app-z7sl.onrender.com/meals"
+      );
       const data = await response.json();
       data.map((meal) => {
         const updatedMeal = meal;
