@@ -9,7 +9,7 @@ function Header({ onOpen }) {
     <header id="main-header">
       <div id="title">
         <img src={Logo} alt="logo" />
-        <h1>REACTFOOD</h1>
+        <h1>Food Order App</h1>
       </div>
       <button className="text-button" onClick={onOpen}>
         Cart ({cartCtx.items ? cartCtx.items.length : 0})

@@ -1,9 +1,16 @@
 import Modal from "./Modal";
 import { currencyFormatter } from "../util/formatting";
 import Input from "./Input";
+import { useContext } from "react";
+import CartContext from "../store/CartContext";
 
 function Checkout({ isDialogOpen, onClose }) {
-  const cartTotal = 0;
+  const cartCtx = useContext(CartContext);
+
+  const cartTotal = cartCtx.items.reduce(
+    (totalPrice, item) => totalPrice + item.quantity * item.price,
+    0
+  );
 
   function handleSubmit() {}
 
